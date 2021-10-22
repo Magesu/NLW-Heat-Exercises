@@ -30,28 +30,50 @@
           <img src="images/mageicon9.png" alt="foto pessoal" />
         </div>
         <h1>Susan Kaori Izawa</h1>
-        <a href="https://github.com/Magesu" target="_blank"
-          ><img src="images/github.svg" alt="icone github" />Fenisu</a
-        >
+        <div id="github">
+          <a href="https://github.com/bob" target="_blank"
+            ><img src="images/github.svg" alt="icone github" />Fenisu</a
+          >
+        </div>
         <p>Aspiring game developer and back-end developer in the making</p>
-        <ul>
-          <li>
-            <a href="https://instagram.com/fenisub3" target="_blank"
+        <ul id="socialLinks">
+          <li class="instagram">
+            <a href="https://instagram.com/bob" target="_blank"
               ><img src="images/instagram.svg" alt="icone instagram"
             /></a>
           </li>
-          <li>
-            <a href="https://facebook.com/susan.izawa.5" target="_blank"
+          <li class="facebook">
+            <a href="https://facebook.com/bob" target="_blank"
               ><img src="images/facebook.svg" alt="icone facebook"
             /></a>
           </li>
-          <li>
-            <a href="https://twitter.com/magesu5" target="_blank"
+          <li class="twitter">
+            <a href="https://twitter.com/bob" target="_blank"
               ><img src="images/twitter.svg" alt="icone twitter"
             /></a>
           </li>
         </ul>
       </div>
     </main>
+    <script>
+      const socialLinkUsername = {
+        github: 'Magesu',
+        instagram: 'fenisub3',
+        facebook: 'susan.izawa.5',
+        twitter: 'magesu5'
+      }
+
+      changeSocialLinks()
+
+      function changeSocialLinks() {
+        github.children[0].href = `https://github.com/${socialLinkUsername.github}`
+
+        for (let li of socialLinks.children) {
+          const social = li.getAttribute('class')
+
+          li.children[0].href = `https://${social}.com/${socialLinkUsername[social]}`
+        }
+      }
+    </script>
   </body>
 </html>
