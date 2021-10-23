@@ -27,53 +27,40 @@
           <span>
             <img src="images/seal.svg" alt="seal" />
           </span>
-          <img src="images/mageicon9.png" alt="foto pessoal" />
+          <img
+            id="avatarPhoto"
+            src="https://lorempixel.com/160/160/people"
+            alt="photo of person"
+          />
         </div>
-        <h1>Susan Kaori Izawa</h1>
-        <div id="github">
-          <a href="https://github.com/bob" target="_blank"
-            ><img src="images/github.svg" alt="icone github" />Fenisu</a
-          >
-        </div>
-        <p>Aspiring game developer and back-end developer in the making</p>
+        <h1 id="githubName">Bob P. Boberto</h1>
+        <a id="githubLink" href="https://github.com/bob" target="_blank">
+          <img src="images/github.svg" alt="github icon" />
+          <span id="githubLogin">Bob</span>
+        </a>
+        <p id="bio">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
         <ul id="socialLinks">
           <li class="instagram">
             <a href="https://instagram.com/bob" target="_blank"
-              ><img src="images/instagram.svg" alt="icone instagram"
+              ><img src="images/instagram.svg" alt="instagram icon"
             /></a>
           </li>
           <li class="facebook">
             <a href="https://facebook.com/bob" target="_blank"
-              ><img src="images/facebook.svg" alt="icone facebook"
+              ><img src="images/facebook.svg" alt="facebook icon"
             /></a>
           </li>
           <li class="twitter">
             <a href="https://twitter.com/bob" target="_blank"
-              ><img src="images/twitter.svg" alt="icone twitter"
+              ><img src="images/twitter.svg" alt="twitter icon"
             /></a>
           </li>
         </ul>
       </div>
     </main>
-    <script>
-      const socialLinkUsername = {
-        github: 'Magesu',
-        instagram: 'fenisub3',
-        facebook: 'susan.izawa.5',
-        twitter: 'magesu5'
-      }
-
-      changeSocialLinks()
-
-      function changeSocialLinks() {
-        github.children[0].href = `https://github.com/${socialLinkUsername.github}`
-
-        for (let li of socialLinks.children) {
-          const social = li.getAttribute('class')
-
-          li.children[0].href = `https://${social}.com/${socialLinkUsername[social]}`
-        }
-      }
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
