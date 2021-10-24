@@ -7,6 +7,7 @@
 html,
 body {
   --lightgray: hsla(240, 9%, 89%);
+  --black: hsla(240, 6%, 8%, 1);
 
   height: 100%;
 
@@ -22,13 +23,43 @@ body {
 main {
   background: url(images/mobileBadge.svg) no-repeat center/cover;
 
+  position: relative;
+
   width: 100vw;
   min-height: 812px;
   height: 100vh;
+
+  display: grid;
+  justify-items: center;
 }
 
-.ribbon {
+.clasp,
+.ribbon,
+.ribbon img {
   display: none;
+  position: absolute;
+}
+
+.clasp {
+  background-color: var(--black);
+
+  top: 16px;
+
+  width: 80px;
+  height: 8px;
+}
+
+.ribbon img {
+  z-index: 1;
+
+  margin-left: -32px;
+
+  top: -1000px;
+
+  object-fit: cover;
+
+  width: 64px;
+  min-height: 1018px;
 }
 
 .container {
@@ -101,4 +132,36 @@ ul {
   justify-content: center;
 
   list-style: none;
+}
+
+@media (min-width: 426px) {
+  body {
+    background: url(images/desktopBackground.svg) no-repeat center/cover;
+  }
+
+  main {
+    background: url(images/desktopBadge.svg) no-repeat center/cover;
+
+    width: 358px;
+    height: 540px;
+    min-height: 540px;
+  }
+
+  .clasp,
+  .ribbon,
+  .ribbon img {
+    display: initial;
+  }
+
+  .avatar {
+    margin-top: 7.2rem;
+  }
+
+  p {
+    margin-top: 3.2rem;
+  }
+
+  ul {
+    margin-top: 4rem;
+  }
 }
