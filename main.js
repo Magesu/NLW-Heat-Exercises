@@ -2,7 +2,8 @@ const socialLinkUsername = {
   github: 'susankizawa',
   instagram: 'fenisub3',
   facebook: 'susan.izawa.5',
-  twitter: 'magesu5'
+  twitter: 'magesu5',
+  linkedin: 'in/susan-kaori-izawa'
 }
 
 getGithubProfile()
