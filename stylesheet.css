@@ -1,5 +1,7 @@
 * {
   margin: 0;
+
+  font-size: 62.5%;
 }
 
 html,
@@ -18,12 +20,15 @@ body {
 }
 
 main {
-  background: url(images/background.svg);
+  background: url(images/mobileBadge.svg) no-repeat center/cover;
 
-  background-size: cover;
+  width: 100vw;
+  min-height: 812px;
+  height: 100vh;
+}
 
-  width: 375px;
-  height: 812px;
+.ribbon {
+  display: none;
 }
 
 .container {
@@ -38,7 +43,7 @@ main {
 .avatar {
   position: relative;
 
-  margin: 11.5rem auto 0;
+  margin: 18.4rem auto 0;
 }
 
 .avatar span {
@@ -49,8 +54,8 @@ main {
 }
 
 .avatar > img {
-  width: 10rem;
-  height: 11.5rem;
+  width: 16rem;
+  height: 18.4rem;
 
   object-fit: cover;
 
@@ -58,34 +63,40 @@ main {
 }
 
 h1 {
-  margin-top: 1.5rem;
+  margin-top: 2.4rem;
 
-  font-size: 1.5rem;
+  font-size: 2.4rem;
 }
 
 a {
-  margin-top: 0.25rem;
+  margin-top: 0.4rem;
 
   color: var(--lightgray);
   text-decoration: none;
 
   display: flex;
-  gap: 0.75rem;
+  gap: 1.2rem;
 
   justify-content: center;
 }
 
+#githubLogin {
+  font-size: 1.6rem;
+}
+
 p {
-  margin-top: 2rem;
+  margin-top: 3.2rem;
+
+  font-size: 1.4rem;
 }
 
 ul {
-  margin-top: 4rem;
+  margin-top: 6.4rem;
 
   padding: 0;
 
   display: flex;
-  gap: 0.5rem;
+  gap: 1.6rem;
 
   justify-content: center;
 
